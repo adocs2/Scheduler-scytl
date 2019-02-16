@@ -12,7 +12,7 @@
           <q-datetime class="q-mb-lg" v-model="deadLine" float-label="Date"/>
           <div class="row justify-end">
             <router-link :to="{name: 'home'}">
-              <q-btn color="green" label="Create new task" @click="createTask(getTask)"/>
+              <q-btn color="green" label="Create new Task" @click="createTask(getTask)"/>
             </router-link>
           </div>
         </q-card-main>
