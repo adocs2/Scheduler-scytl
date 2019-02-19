@@ -24,9 +24,12 @@ export default {
   computed: {
     tasks: {
       get () {
-        return this.$store.state.allTasks.tasks
+        return this.$store.state.Tasks.tasks
       }
     }
+  },
+  created () {
+    this.$store.dispatch('getAllTasks')
   }
 }
 </script>
