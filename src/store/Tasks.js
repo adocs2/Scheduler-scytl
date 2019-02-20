@@ -7,7 +7,6 @@ export default {
     async createTask (state, task) {
       const userid = 'dca0f3820bdf4384b2f5babc183aa3'
       const postUrl = 'http://prova.scytlbrasil.com:81/Api/tasks/PostTask?userid='
-      console.log(task)
       await axios.post(postUrl + userid, {
         Title: task.taskTitle,
         Description: task.taskDescription,

@@ -85,7 +85,11 @@ export default {
       this.task.taskId = this.taskId
       this.task.taskTitle = task[0].Title
       this.task.taskDescription = task[0].Description
-      this.task.taskCompleted = task[0].Completed.toString()
+      if (task[0].Completed !== null) {
+        this.task.taskCompleted = task[0].Completed.toString()
+      } else {
+        this.task.taskCompleted = task[0].Completed
+      }
       this.task.taskDeadLine = task[0].Deadline
     }
   },
