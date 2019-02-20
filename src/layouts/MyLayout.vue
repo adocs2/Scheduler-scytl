@@ -15,7 +15,9 @@
         </q-btn>
 
         <q-toolbar-title>
-          My Schedules
+          <router-link :to="{name: 'home'}">
+            My Schedules
+          </router-link>
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>
@@ -49,4 +51,8 @@ export default {
 </script>
 
 <style>
+  a {
+    text-decoration: none;
+    color: #777;
+  }
 </style>

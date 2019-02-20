@@ -1,16 +1,17 @@
 <template>
   <q-page padding>
-    <div v-show="tasks.length > 0" v-for="task in tasks" v-bind:key="task.id" class="row justify-center full-height full-width text-center q-mb-lg">
+    <div v-show="tasks.length > 0" v-for="task in tasks" v-bind:key="task.Id"
+         class="row justify-center full-height full-width text-center q-mb-lg">
       <q-card color="white" text-color="faded">
-        <q-card-main>
-          {{task.Title}}
-        </q-card-main>
+        <router-link :to="{ name: 'editTask', params: { taskId: task.Id }}">
+          <q-card-main style="width: 15em">
+            {{task.Title}}
+          </q-card-main>
+        </router-link>
       </q-card>
     </div>
     <div class="row justify-center text-center q-mb-lg">
-      <router-link :to="{name: 'newTask'}">
-        <q-btn color="white" text-color="faded" label="Create new task"/>
-      </router-link>
+      <q-btn color="white" to="newTask" text-color="faded" label="Create new task"/>
     </div>
   </q-page>
 </template>

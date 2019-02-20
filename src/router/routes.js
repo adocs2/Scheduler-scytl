@@ -12,6 +12,14 @@ const routes = [
     children: [
       { path: '', name: 'newTask', component: () => import('pages/NewTask.vue') }
     ]
+  },
+  {
+    path: '/editTask/:taskId',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', name: 'editTask', component: () => import('pages/EditTask.vue'), props: true }
+    ],
+    props: true
   }
 ]
 

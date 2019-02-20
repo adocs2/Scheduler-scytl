@@ -9,11 +9,9 @@
           <q-radio style="padding-right: 1em" v-model="task.taskCompleted" val="true" label="Yes"/>
           <q-radio v-model="task.taskCompleted" val="false" label="No"/>
 
-          <q-datetime class="q-mb-lg" v-model="task.taskDeadLine" float-label="Date" format="MM/DD/YYYY" format-model="MM/DD/YYYY"/>
+          <q-datetime class="q-mb-lg" v-model="task.taskDeadLine" float-label="Date" format="MM/DD/YYYY"/>
           <div class="row justify-end">
-            <router-link :to="{name: 'home'}">
-              <q-btn color="green" label="Create new Task" @click="createTask()"/>
-            </router-link>
+            <q-btn color="green" label="Create new Task" @click="createTask()" :disabled="blockedButton"/>
           </div>
         </q-card-main>
       </q-card>
@@ -35,6 +33,11 @@ export default {
         taskCompleted: '',
         taskDeadLine: ''
       }
+    }
+  },
+  computed: {
+    blockedButton () {
+      return this.task.taskTitle <= 0
     }
   },
   methods: {
