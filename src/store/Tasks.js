@@ -41,7 +41,20 @@ export default {
         })
     },
     getTask (state, id) {
-      return state.state.tasks.filter((task) => (task.Id === id))
+      if (state.state.tasks.length > 0) {
+        const task = state.state.tasks.filter((task) => (task.Id === id))
+        return {
+          Id: task[0].Id,
+          Title: task[0].Title,
+          Description: task[0].Description,
+          Completed: task[0].Completed,
+          Deadline: task[0].Deadline
+        }
+      } else {
+        const getTaskUrl = 'http://prova.scytlbrasil.com:81/Api/tasks/GetTask?id=' + id + '&userid='
+        const userid = 'dca0f3820bdf4384b2f5babc183aa3'
+        return axios.get(getTaskUrl + userid).then((response) => (response.data))
+      }
     }
   },
   mutations: {

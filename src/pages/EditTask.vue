@@ -84,14 +84,14 @@ export default {
     },
     mapTask (task) {
       this.task.taskId = this.taskId
-      this.task.taskTitle = task[0].Title
-      this.task.taskDescription = task[0].Description
-      if (task[0].Completed !== null) {
-        this.task.taskCompleted = task[0].Completed.toString()
+      this.task.taskTitle = task.Title
+      this.task.taskDescription = task.Description
+      if (task.Completed !== null) {
+        this.task.taskCompleted = task.Completed.toString()
       } else {
-        this.task.taskCompleted = task[0].Completed
+        this.task.taskCompleted = task.Completed
       }
-      this.task.taskDeadLine = task[0].Deadline
+      this.task.taskDeadLine = task.Deadline
     }
   },
   created () {
