@@ -3,8 +3,9 @@
     <div class="row justify-center full-height full-width">
       <q-card class="col-6 bigger q-ma-sm" color="white" text-color="faded">
         <q-card-main>
-          <q-input class="q-mb-lg" v-model="task.taskTitle" float-label="Title"/>
-          <q-input class="q-mb-lg" v-model="task.taskDescription" float-label="Description" type="textarea"/>
+          <q-input class="q-mb-lg" v-model="task.taskTitle" float-label="Title" maxlength="100"/>
+          <q-input class="q-mb-lg" v-model="task.taskDescription" float-label="Description" type="textarea"
+                   maxlength="400"/>
           Is this task completed?
           <q-radio style="padding-right: 1em" v-model="task.taskCompleted" val="true" label="Yes"/>
           <q-radio v-model="task.taskCompleted" val="false" label="No"/>
@@ -37,7 +38,7 @@ export default {
   },
   computed: {
     blockedButton () {
-      return this.task.taskTitle <= 0
+      return this.task.taskTitle.length <= 0 || this.task.taskTitle.length >= 101 || this.task.taskDescription.length >= 401
     }
   },
   methods: {
