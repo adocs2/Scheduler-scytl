@@ -58,9 +58,9 @@ export default {
             }
           }).then(() => {
             this.deleteTask()
-            this.$q.notify('Agreed!')
+            this.$q.notify('Deleted')
           }).catch(() => {
-            this.$q.notify('Disagreed...')
+            this.$q.notify('Cancel Delete')
           })
         }
       }
