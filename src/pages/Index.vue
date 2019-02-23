@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div v-show="tasks.length > 0" class="row justify-center text-center q-mb-lg">
+    <div class="row justify-center text-center q-mb-lg">
       <q-btn-toggle
         no-caps
         v-model="filterOption"
@@ -36,9 +36,6 @@
 </template>
 
 <style>
-  .btn-inner{
-    width: 119px;
-  }
 </style>
 
 <script>
