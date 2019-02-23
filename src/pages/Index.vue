@@ -2,14 +2,15 @@
   <q-page padding>
     <div v-show="tasks.length > 0" class="row justify-center text-center q-mb-lg">
       <q-btn-toggle
+        no-caps
         v-model="filterOption"
         color="white"
         text-color="faded"
         toggle-color="primary"
         :options="[
-    {label: 'All tasks', value: 1},
-    {label: 'Completed tasks', value: 2},
-    {label: 'Incompleted tasks', value: 3}
+    {label: 'All Tasks', value: 1},
+    {label: 'Completed Tasks', value: 2},
+    {label: 'Incompleted Tasks', value: 3}
   ]"></q-btn-toggle>
 
     </div>
@@ -18,7 +19,12 @@
       <q-card color="white" text-color="faded">
         <router-link :to="{ name: 'editTask', params: { taskId: task.Id }}">
           <q-card-main style="width: 15em">
-            {{task.Title}}
+            <div class="row justify-between">
+              {{task.Title}}
+              <q-icon v-show="task.Completed === true" style="color: limegreen" name="done"></q-icon>
+              <q-icon v-show="task.Completed === null" style="color: yellow" name="indeterminate_check_box"></q-icon>
+              <q-icon v-show="task.Completed === false" style="color: red" name="not_interested"></q-icon>
+            </div>
           </q-card-main>
         </router-link>
       </q-card>
@@ -30,6 +36,9 @@
 </template>
 
 <style>
+  .btn-inner{
+    width: 119px;
+  }
 </style>
 
 <script>

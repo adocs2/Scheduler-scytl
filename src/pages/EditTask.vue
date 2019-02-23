@@ -58,9 +58,17 @@ export default {
             }
           }).then(() => {
             this.deleteTask()
-            this.$q.notify('Deleted')
+            this.$q.notify({
+              message: 'Deleted the task',
+              type: 'warning',
+              color: 'warning'
+            })
           }).catch(() => {
-            this.$q.notify('Cancel Delete')
+            this.$q.notify({
+              message: 'Kept the task',
+              type: 'positive',
+              color: 'positive'
+            })
           })
         }
       }
