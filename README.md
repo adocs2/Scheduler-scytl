@@ -31,7 +31,7 @@ run $ npm install -g cordova
 2) run $ quasar dev -m cordova -T android -t mat
 
 #### - Your phone (Android)
-1) make sure your phone is in dev mode.
+1) make sure your cell phone is in dev mode.
 2) plug your phone in the usb port.
 2) run $ quasar dev -m cordova -T android -t mat
 
@@ -43,4 +43,4 @@ run $ npm install -g cordova
 
 
 * For IOS build access: https://quasar-framework.org/guide/
-* Link for APK (Download before install in your cell, installing direct from google drive don't work): https://drive.google.com/open?id=1egYFNqUFyZA28CnboFp8JyL0AolIxEC4
+* Link for APK (Download before install in your cell phone, installing direct from google drive don't work): https://drive.google.com/open?id=1egYFNqUFyZA28CnboFp8JyL0AolIxEC4
