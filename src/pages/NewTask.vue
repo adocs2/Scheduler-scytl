@@ -4,10 +4,10 @@
       <q-card class="col-6 bigger q-ma-sm" color="white" text-color="faded">
         <q-card-main>
           <q-input class="q-mb-lg" v-model="task.taskTitle" float-label="Title" maxlength="100"/>
-          <q-input class="q-mb-lg" v-model="task.taskDescription" float-label="Description" type="textarea"
+          <q-input class="q-mb-lg" v-model="task.taskDescription" rows="5" float-label="Description" type="textarea"
                    maxlength="400"/>
           Is this task completed?
-          <q-radio style="padding-right: 1em" v-model="task.taskCompleted" val="true" label="Yes"/>
+          <q-radio style="padding: 0 4em 0 4em" v-model="task.taskCompleted" val="true" label="Yes"/>
           <q-radio v-model="task.taskCompleted" val="false" label="No"/>
 
           <q-datetime class="q-mb-lg" v-model="task.taskDeadLine" float-label="Date" format="MM/DD/YYYY"/>
