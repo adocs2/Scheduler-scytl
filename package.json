@@ -2,7 +2,7 @@
   "name": "scheduler-scytl",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "productName": "Scheduler Scytl",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Afonso Dias <afonso-dias2011@hotmail.com>",
   "private": true,
