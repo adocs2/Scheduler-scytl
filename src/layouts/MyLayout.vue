@@ -26,6 +26,18 @@
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
+      <dl>
+        <dt>App developed by:</dt>
+        <dd>Afonso Dias</dd>
+        <dt>Github:</dt>
+        <dd>https://github.com/adocs2</dd>
+        <dt>Email:</dt>
+        <dd>afonso-dias2011@hotmail.com
+        <dt>Quasar Guide:</dt>
+        <dd>https://quasar-framework.org/guide/</dd>
+        <dt>Vue.js Guide:</dt>
+        <dd>https://vuejs.org/v2/guide/</dd>
+      </dl>
     </q-layout-drawer>
 
     <q-page-container>
