@@ -43,4 +43,4 @@ run $ npm install -g cordova
 
 
 * For IOS build access: https://quasar-framework.org/guide/
-* Link for APK https://drive.google.com/open?id=1egYFNqUFyZA28CnboFp8JyL0AolIxEC4
+* Link for APK (Download before install in your cell, installing direct from google drive don't work): https://drive.google.com/open?id=1egYFNqUFyZA28CnboFp8JyL0AolIxEC4
