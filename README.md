@@ -11,7 +11,7 @@
 #### - vue-cli globally
 $ npm install -g vue-cli
 
-#### - Node.js >= 8.9.0 is required.
+#### - quasar-cli
 run $ npm install -g quasar-cli
 
 #### - Cordova CLI
